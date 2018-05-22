@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<title>App Lista de cosas por hacer</title>
+	<script>
+		function addItem() {
+			var newItem = document.createElement("div");
+			newItem.innerHTML = document.getElementById("box").value;
+			newItem.onclick = cambiarColorItem;
+			newItem.ondblclick = removeItem;
+			/* newItem.onclick = removeItem; */
+			document.getElementById("list").appendChild(newItem);
+			saveList();
+		}
+		function cambiarColorItem() {
+			if (this.style.color=="grey"){
+				this.style.color="black";
+			}
+			else {
+				this.style.color="grey";
+				/* tachado */
+			}
+		}
+		function removeItem() {
+			if (this.style.color == "grey") { 
+				/* gris Comprobación preocupante */
+				document.getElementById("list").removeChild(this);
+				saveList();
+			}			
+		}
+
+		function saveList() {
+			localStorage.storedList = document.getElementById("list").innerHTML;
+			localStorage.storedListGrey = document.getElementById("list").innerHTML;
+			var cadena =localStorage.storedListGrey;
+			var vector=cadena.split("<div>");
+			alert(vector[1]);
+
+		/*	for (var i=0;)
+			{
+				localStorage.storedList = ;
+			}
+
+			{
+				localStorage.storedListGrey = ;
+			} 
+			*/
+		}
+
+		function loadList() {
+			document.getElementById("list").innerHTML = localStorage.storedList + localStorage.storedListGrey;
+			
+			/*
+			document.getElementById("list").innerHTML = localStorage.storedList;
+
+			for(var i = 0; i < list.children.length; i++) {
+				list.children[i].onclick = removeItem; */
+
+			for(var i=0;i< document.getElementById("list").children.length;i++) {
+				//document.getElementById("list").childNodes[i].onclick = removeItem;
+				document.getElementById("list").childNodes[i].onclick = cambiarColorItem;
+				document.getElementById("list").childNodes[i].ondblclick = removeItem;
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>Lista de cosas por hacer</p>
+	<br/>
+	<input type="text"  id="box" value="Escribe aquí para añadir una tarea."/>
+	<br/>
+	<input type="button" value="Añadir tarea" onclick="addItem();"/>
+	<br/>
+	<div id="list"></div>
+	<script>
+		if(localStorage.storedList) {
+			loadList();
+		}
+	</script>
+</body>
+</html>
