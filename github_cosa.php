@@ -14,16 +14,12 @@ class github_cosa extends CI_Controller {
       echo "<h2>Hola a todos. Soy <h1>Andrés</h1>.</h2>";	
     }
     
-    public function ruben() {     	
+    public function andres2()  {        	
     	// helpers y libraries
-    	echo "<p>Función de Rubén</p>";
-    
+      echo "<h2>Hola a todos. Soy <h1>Andrés</h1>.</h2>";	
     }
     
-    public function jordi()  {        	
-    	// helpers y libraries
-      echo "<h2>Hola a todos. Soy <h1>Jordi</h1>.</h2>";	
-    }
+    
 
 }
 ?>
