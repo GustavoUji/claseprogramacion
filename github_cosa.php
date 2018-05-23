@@ -10,6 +10,11 @@ class github_cosa extends CI_Controller {
     }
     
 
+    public function nicolay() {     	
+    	// helpers y libraries
+     echo "<h2>Hola a todos. Soy <h1>Nicolay</h1>.</h2>";	
+      
+
     public function julia() {   
         // helpers y libraries
     	   echo "<h2>Hola a todos. Soy <h1>Julia</h1>.</h2>";	
