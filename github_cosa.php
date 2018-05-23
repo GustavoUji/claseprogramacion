@@ -13,6 +13,9 @@ class github_cosa extends CI_Controller {
     	// helpers y libraries
     
     }
-
+    public function constantyn()  {        	
+    	// helpers y libraries
+      echo "<h2>Hola a todos. Soy <h1>Constantyn</h1>.</h2>";	
+    }
 }
 ?>
