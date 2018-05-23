@@ -13,6 +13,11 @@ class github_cosa extends CI_Controller {
     	// helpers y libraries
     
     }
+    
+    public function jordi()  {        	
+    	// helpers y libraries
+      echo "<h2>Hola a todos. Soy <h1>Jordi</h1>.</h2>";	
+    }
 
 }
 ?>
