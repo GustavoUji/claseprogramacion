@@ -11,6 +11,7 @@ class github_cosa extends CI_Controller {
     
     public function alumno() {     	
     	// helpers y libraries
+    	echo "<p>Función de Rubén</p>";
     
     }
 
