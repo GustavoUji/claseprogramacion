@@ -1,2 +1,2 @@
 # claseprogramacion
-Curso programación CodeIgniter
+Presentación del framework CodeIgniter con ejemplos.
